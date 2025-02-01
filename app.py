@@ -13,10 +13,8 @@ def analyze_sentiments(texts, analyzer):
         results.append({
             'text': text,
             'sentiment': result['label'],
-            'confidence': result['score']*100
-        })
+            'confidence': result['score']*100})
     return pd.DataFrame(results)
-
 
 st.title("Real-time Sentiment Analysis Dashboard")
 analyzer = create_sentiment_analyzer()
